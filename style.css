@@ -67,7 +67,7 @@
 }
 @keyframes saut {
   100%{
-    translate: 0 -30%;
+    translate: 0 -20%;
   }
 }
 @font-face {
