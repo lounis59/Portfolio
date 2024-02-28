@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "SilksScreen-Regular";
+  src: url(./assets/Silkscreen-Regular.ttf);
+}
+body {
+  background-color: rgb(49, 54, 59);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main {
+  width: 80vw;
+  height: 100vh;
+  background-color: rgb(72, 79, 85);
+  margin-top: 100px;
+  border: 2px solid grey;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 20px rgb(37, 37, 37);
+  display: grid;
+  grid-template-columns: 4;
+}
+h1 {
+  grid-column: 1/5;
+  text-align: center;
+  font-size: 5rem;
+  font-family: "SilksScreen-Regular";
+  color: darkgoldenrod;
+}
