@@ -1,6 +1,78 @@
+@keyframes mouv {
+  5% {
+    translate: 5cqw -1cqw;
+  }
+  10% {
+    translate: 10cqw 1cqw;
+  }
+  15% {
+    translate: 15cqw -1cqw;
+  }
+  20% {
+    translate: 20cqw 1cqw;
+  }
+  25% {
+    translate: 25cqw -1cqw;
+  }
+  30% {
+    translate: 30cqw 1cqw;
+  }
+  35% {
+    translate: 35cqw -1cqw;
+  }
+  40% {
+    translate: 40cqw 1cqw;
+  }
+  45% {
+    translate: 45cqw -1cqw;
+  }
+  50% {
+    translate: 50cqw 1cqw;
+  }
+  55% {
+    translate: 55cqw -1cqw;
+  }
+  60% {
+    translate: 60cqw 1cqw;
+  }
+  65% {
+    translate: 65cqw -1cqw;
+  }
+  70% {
+    translate: 70cqw 1cqw;
+  }
+  75% {
+    translate: 75cqw -1cqw;
+  }
+  80% {
+    translate: 80cqw 1cqw;
+  }
+  85% {
+    translate: 85cqw -1cqw;
+  }
+  90% {
+    translate: 90cqw 1cqw;
+  }
+  95% {
+    translate: 95cqw -1cqw;
+  }
+  100% {
+    translate: 100cqw;
+  }
+}
+@keyframes rotation {
+  100%{
+    rotate: 360deg;
+  }
+}
+@keyframes saut {
+  100%{
+    translate: 0 -30%;
+  }
+}
 @font-face {
   font-family: "SilksScreen-Regular";
-  src: url(./assets/Silkscreen-Regular.ttf);
+  src: url(./assets/font-family/Silkscreen-Regular.ttf);
 }
 body {
   background-color: rgb(49, 54, 59);
@@ -10,19 +82,74 @@ body {
 }
 main {
   width: 80vw;
-  height: 100vh;
+  height: auto;
+  min-height: 120vh;
   background-color: rgb(72, 79, 85);
   margin-top: 100px;
   border: 2px solid grey;
   border-radius: 30px;
   box-shadow: 0 0 10px 20px rgb(37, 37, 37);
   display: grid;
-  grid-template-columns: 4;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: min-content min-content min-content;
+}
+.title{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-column: 1/5;
+}
+.title i{
+  font-size: 5rem;
+  color: goldenrod;
+  animation: rotation 1.5s infinite;
 }
 h1 {
-  grid-column: 1/5;
+  
   text-align: center;
   font-size: 5rem;
   font-family: "SilksScreen-Regular";
   color: darkgoldenrod;
+}
+.present p {
+  font-family: "SilksScreen-Regular";
+  color: goldenrod;
+  margin-left: 5%;
+}
+.present {
+  container-type: inline-size;
+  grid-row: 2/2;
+  grid-column: 1/4;
+}
+.present i {
+  color: goldenrod;
+  animation: mouv 3s infinite alternate;
+}
+.Cv{
+  position: relative;
+  grid-row: 3;
+  grid-column: 3/5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.Cv h3{
+  font-family: "SilksScreen-Regular" ;
+  font-size: 2rem;
+  color: goldenrod;
+}
+.Cv i{
+  color: goldenrod;
+  font-size: 3rem;
+  cursor: pointer;
+  animation: saut 0.4s infinite alternate;
+}
+.cv{
+  display:none;
+  position: absolute;
+  top:50%
+}
+.Cv i:hover+.cv{
+  display: block;
 }
