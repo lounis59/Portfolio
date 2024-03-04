@@ -154,7 +154,7 @@ main {
   box-shadow: 0 0 10px 20px rgb(37, 37, 37);
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: max-content max-content 1fr 1fr 1fr  max-content;
 }
 
 .title {
@@ -188,11 +188,15 @@ h1 {
   container-type: inline-size;
   grid-row: 2/2;
   grid-column: 1/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .present i {
   color: goldenrod;
   animation: mouv 3s infinite alternate;
+  margin: 5%;
 }
 
 .Cv {
@@ -202,7 +206,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  justify-content: center;
 }
 
 .Cv h3 {
@@ -216,6 +220,7 @@ h1 {
   font-size: 3rem;
   cursor: pointer;
   animation: saut 0.4s infinite alternate;
+  margin: 5%;
 }
 
 .cv {
@@ -234,7 +239,7 @@ h1 {
   grid-column: 1/3;
   display: flex;
   align-items: center;
-  margin-left: 5%;
+  margin: 5%;
 }
 .imgMario img{
   width: 80%;
@@ -245,6 +250,7 @@ h1 {
   grid-column: 1/3;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -257,6 +263,7 @@ h1 {
 .comp i {
   font-size: 3rem;
   animation: saut 0.3s infinite alternate;
+  
 }
 
 .logoComp {
@@ -264,7 +271,8 @@ h1 {
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 10%;
+
 }
 
 .fa-html5 {
@@ -285,6 +293,73 @@ h1 {
 .comp .fa-database {
   color: yellow;
   animation-delay: 0.3s;
+}
+.projet{
+  grid-row: 5;
+  grid-column: 3/5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  h3{
+    font-family: "SilksScreen-Regular";
+    color: goldenrod;
+    font-size: 3rem;
+  }
+  i{
+    color: skyblue;
+    font-size: 5rem;
+    margin: 10%;
+  }
+}
+.contact{
+  grid-row: 6;
+  grid-column: 1/5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: thick double gray ;
+  h3{
+    color: goldenrod;
+    font-family:"SilksScreen-Regular" ;
+    font-size: 3rem;
+  }
+  .logoCont{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5%;
+    i{
+      font-size: 3rem;
+    }
+    .fa-envelope{
+      color:  rgb(117, 7, 29)
+    }
+    h4{
+      font-family:"SilksScreen-Regular" ;
+      color: goldenrod;
+    }
+  }
+}
+.imgSpirit{
+  grid-row: 4;
+  grid-column: 3/5;
+  img{
+
+    width: 80%;
+  }
+}
+.dbz{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: 5;
+  grid-column: 1/3;
+  img{
+    width: 80%;
+  }
 }
 
 .starship {
