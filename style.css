@@ -1,85 +1,148 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @keyframes mouv {
   5% {
     translate: 5cqw -1cqw;
   }
+
   10% {
     translate: 10cqw 1cqw;
   }
+
   15% {
     translate: 15cqw -1cqw;
   }
+
   20% {
     translate: 20cqw 1cqw;
   }
+
   25% {
     translate: 25cqw -1cqw;
   }
+
   30% {
     translate: 30cqw 1cqw;
   }
+
   35% {
     translate: 35cqw -1cqw;
   }
+
   40% {
     translate: 40cqw 1cqw;
   }
+
   45% {
     translate: 45cqw -1cqw;
   }
+
   50% {
     translate: 50cqw 1cqw;
   }
+
   55% {
     translate: 55cqw -1cqw;
   }
+
   60% {
     translate: 60cqw 1cqw;
   }
+
   65% {
     translate: 65cqw -1cqw;
   }
+
   70% {
     translate: 70cqw 1cqw;
   }
+
   75% {
     translate: 75cqw -1cqw;
   }
+
   80% {
     translate: 80cqw 1cqw;
   }
+
   85% {
     translate: 85cqw -1cqw;
   }
+
   90% {
     translate: 90cqw 1cqw;
   }
+
   95% {
     translate: 95cqw -1cqw;
   }
+
   100% {
     translate: 100cqw;
   }
 }
+
 @keyframes rotation {
-  100%{
+  100% {
     rotate: 360deg;
   }
 }
+
 @keyframes saut {
-  100%{
+  100% {
     translate: 0 -20%;
   }
 }
+@keyframes vole {
+  0%{
+    top: 100%;
+  }
+
+  
+  45% {
+    top: 0;
+    rotate: 0deg;
+  }
+  55%{
+    top: 0;
+    rotate:  180deg;
+
+  }
+  90%{
+    top: 100%;
+    rotate: 180deg;
+  }
+  100%{
+    top:100%;
+    rotate: 360deg;
+  }
+}
+
 @font-face {
   font-family: "SilksScreen-Regular";
   src: url(./assets/font-family/Silkscreen-Regular.ttf);
 }
+
 body {
   background-color: rgb(49, 54, 59);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+
+  
 }
+
+.page-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+
 main {
   width: 80vw;
   height: auto;
@@ -91,65 +154,166 @@ main {
   box-shadow: 0 0 10px 20px rgb(37, 37, 37);
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: min-content min-content min-content;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
-.title{
+
+.title {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   grid-column: 1/5;
 }
-.title i{
+
+.title i {
   font-size: 5rem;
   color: goldenrod;
   animation: rotation 1.5s infinite;
 }
+
 h1 {
-  
+
   text-align: center;
   font-size: 5rem;
   font-family: "SilksScreen-Regular";
   color: darkgoldenrod;
 }
+
 .present p {
   font-family: "SilksScreen-Regular";
   color: goldenrod;
   margin-left: 5%;
 }
+
 .present {
   container-type: inline-size;
   grid-row: 2/2;
   grid-column: 1/4;
 }
+
 .present i {
   color: goldenrod;
   animation: mouv 3s infinite alternate;
 }
-.Cv{
+
+.Cv {
   position: relative;
   grid-row: 3;
   grid-column: 3/5;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
 }
-.Cv h3{
-  font-family: "SilksScreen-Regular" ;
+
+.Cv h3 {
+  font-family: "SilksScreen-Regular";
   font-size: 2rem;
   color: goldenrod;
 }
-.Cv i{
+
+.Cv i {
   color: goldenrod;
   font-size: 3rem;
   cursor: pointer;
   animation: saut 0.4s infinite alternate;
 }
-.cv{
-  display:none;
+
+.cv {
+  display: none;
   position: absolute;
-  top:50%
+  top: 0;
+  right: 60%;
+  z-index: 2;
 }
-.Cv i:hover+.cv{
+
+.Cv i:hover+.cv {
   display: block;
+}
+.imgMario{
+  grid-row: 3;
+  grid-column: 1/3;
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+}
+.imgMario img{
+  width: 80%;
+}
+
+.comp {
+  grid-row: 4;
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comp h3 {
+  font-family: "SilksScreen-Regular";
+  color: goldenrod;
+  font-size: 3rem;
+}
+
+.comp i {
+  font-size: 3rem;
+  animation: saut 0.3s infinite alternate;
+}
+
+.logoComp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.fa-html5 {
+  color: orangered;
+
+}
+
+.comp .fa-css3-alt {
+  color: blue;
+  animation-delay: 0.1s;
+}
+
+.comp .fa-js {
+  color: yellow;
+  animation-delay: 0.2s;
+}
+
+.comp .fa-database {
+  color: yellow;
+  animation-delay: 0.3s;
+}
+
+.starship {
+  width: 5%;
+  position: absolute;
+  bottom: 0;
+  animation: vole 6s infinite;
+}
+#starship1{
+  left: 10px;
+}
+#starship2{
+  right: 10px;
+}
+
+@media screen and (max-width:990px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:790px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width:550px) {
+  :root {
+    font-size: 5px;
+  }
 }
