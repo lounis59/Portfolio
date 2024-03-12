@@ -224,16 +224,14 @@ h1 {
 }
 
 .cv {
-  display: none;
+  
   position: absolute;
   top: 0;
-  right: 60%;
+  right: 100vw;
   z-index: 2;
 }
 
-.Cv i:hover+.cv {
-  display: block;
-}
+
 .imgMario{
   grid-row: 3;
   grid-column: 1/3;
