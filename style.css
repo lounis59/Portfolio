@@ -292,6 +292,10 @@ h1 {
   color: yellow;
   animation-delay: 0.3s;
 }
+.comp .fa-php {
+  color: blue;
+  animation-delay: 0.4s;
+}
 .projet{
   grid-row: 5;
   grid-column: 3/5;
